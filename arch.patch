@@ -1,0 +1,21 @@
+diff -Naur ./cinnamon7Menu@physics.orig/applet.js ./cinnamon7Menu@physics/applet.js
+--- ./cinnamon7Menu@physics.orig/applet.js	2013-01-27 13:34:00.701647771 -0500
++++ ./cinnamon7Menu@physics/applet.js	2013-01-27 13:39:08.681642370 -0500
+@@ -725,8 +725,7 @@
+         this.music = new TextBoxItem(_("Music"), "folder-music", "Util.spawnCommandLine('nemo Music')", this.menu, this.hoverIcon, false);
+         this.videos = new TextBoxItem(_("Videos"), "folder-videos", "Util.spawnCommandLine('nemo Videos')", this.menu, this.hoverIcon, false);
+         this.computer = new TextBoxItem(_("Computer"), "computer", "Util.spawnCommandLine('nemo computer:///')", this.menu, this.hoverIcon, false);
+-        this.packageItem = new TextBoxItem(_("Package Manager"), "synaptic", "Util.spawnCommandLine('gksu synaptic')", this.menu, this.hoverIcon, false);
+-        this.control = new TextBoxItem(_("Control Center"), "gnome-control-center", "Util.spawnCommandLine('gnome-control-center')", this.menu, this.hoverIcon, false);
++        this.control = new TextBoxItem(_("Control Center"), "cinnamon-control-center", "Util.spawnCommandLine('cinnamon-control-center')", this.menu, this.hoverIcon, false);
+         this.terminal = new TextBoxItem(_("Terminal"), "terminal", "Util.spawnCommandLine('gnome-terminal')", this.menu, this.hoverIcon, false);
+         this.help = new TextBoxItem(_("Help"), "help", "Util.spawnCommandLine('yelp')", this.menu, this.hoverIcon, false);
+         this.shutdown = new TextBoxItem(_("Shutdown"), "system-shutdown", "Session.ShutdownRemote()", this.menu, this.hoverIcon, false);
+@@ -745,7 +744,6 @@
+         this.itemsBox.add_actor(this.computer.actor);
+         this.itemsBox.add_actor(this.control.actor);
+         this.itemsBox.add_actor(new PopupMenu.PopupSeparatorMenuItem().actor);
+-        this.itemsBox.add_actor(this.packageItem.actor);
+         this.itemsBox.add_actor(this.terminal.actor);
+         this.itemsBox.add_actor(this.help.actor);
+         this.shutDownItemsBox.add_actor(this.shutdownBox);
